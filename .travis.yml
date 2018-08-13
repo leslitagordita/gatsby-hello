@@ -9,7 +9,7 @@ dist: trusty
 sudo: false
 
 jobs:
-  -stage: "Tests"
+  - stage: "Tests"
     script: scripts/hello.py
  
 addons:
