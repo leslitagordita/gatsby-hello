@@ -24,7 +24,7 @@ before_install:
 - cp scripts/id_rsa ~/.ssh/id_rsa
 - chmod 600 ~/.ssh/id_rsa
 - ssh-add ~/.ssh/id_rsa
-- echo "ssh -o StrictHostKeyChecking=no -l $user $host" >> ~/.ssh/config
+- echo -e "Host 173.255.204.36\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 deploy:
 - provider: script
