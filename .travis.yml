@@ -1,16 +1,16 @@
 language: python
 python:
 - '3.6'
-cache:
-  pip: true
+
+#cache:
+#  pip: true
 
 dist: trusty
 sudo: false
 
-#env:
-#- TEST_SUITE=vale
-#- TEST_SUITE=blueberry
-#- TEST_SUITE=docs404
+jobs:
+  -stage: "Tests"
+    script: scripts/hello.py
  
 addons:
   ssh_known_hosts:
