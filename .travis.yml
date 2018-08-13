@@ -9,8 +9,9 @@ dist: trusty
 sudo: false
 
 jobs:
-  - stage: "Tests"
-    script: scripts/hello.py
+  include:
+    - stage: "Tests"
+      script: scripts/hello.py
  
 addons:
   ssh_known_hosts:
