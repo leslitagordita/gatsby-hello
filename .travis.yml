@@ -1,6 +1,6 @@
-language: python
-python:
-- '3.6'
+language: node_js
+node_js:
+- "10.0"
 
 #cache:
 #  pip: true
@@ -8,10 +8,10 @@ python:
 dist: trusty
 sudo: false
 
-jobs:
-  include:
-    - stage: "Tests"
-      script: scripts/hello.py
+#jobs:
+#  include:
+#    - stage: "Tests"
+#      script: scripts/hello.py
  
 addons:
   ssh_known_hosts:
@@ -25,9 +25,9 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - ssh-add ~/.ssh/id_rsa
 - echo -e "Host 173.255.204.36\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- sudo apt-get install nodejs
-- npm i -g npm@6
-- npm install --global gatsby-cli
+#- sudo apt-get install nodejs
+#- npm i -g npm@6
+#- npm install --global gatsby-cli
 
 deploy:
 - provider: script
